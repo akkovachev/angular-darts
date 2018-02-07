@@ -1,0 +1,99 @@
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .flex-element {
+    flex: 0 1 auto;
+  }
+  
+  .flex-full {
+    flex: 1 1 auto;
+  }
+  
+  .player-container {
+    width: 300px;
+    height: 400px;
+    border: 1px solid black;
+    border-radius: 6px;
+  }
+  
+  .player-name, .player-scores {
+    font-size: 26px;
+    font-weight: bold;
+  }
+  
+  .player-info {
+    padding: 10px;
+    border-bottom: 1px solid black;
+  }
+  
+  .bull-green {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #006a02;
+    border: 1px solid black;
+  }
+  
+  .bull-red {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgb(255, 64, 0);
+    position: relative;
+    top: 8px;
+    left: 8px;
+    border: 1px solid black;
+  }
+  
+  .scores-section {
+    list-style: none;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px;
+    padding: 0;
+  }
+  
+  .scores-section li {
+    padding: 5px;
+    position: relative;
+  }
+  
+  .pull-text-right {
+    text-align: right;
+  }
+  
+  .number {
+    border: 1px solid black;
+    border-radius: 6px;
+    background: #e3e3e3;
+    cursor:pointer;
+    padding:0 5px;
+  }
+  
+  ul li span.number:hover div.double-triple {
+    visibility: visible;
+    animation: fadein 0.5s;
+    left: 48px;
+    cursor:pointer;
+  }
+  
+  .double-triple {
+    position: absolute;
+    display: inline-flex;
+    visibility: hidden;
+  }
+  
+  .double-triple div {
+    margin-left: 4px;
+    border: 1px solid black;
+      border-radius: 6px;
+      background: #e3e3e3;
+  }
+  
+  @keyframes fadein {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+  }
+  
