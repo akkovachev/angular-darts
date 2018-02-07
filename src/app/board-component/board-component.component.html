@@ -1,6 +1,82 @@
-<div class="navigation">
+<div class="flex-container">
+  <div class="flex-element player-container" *ngFor="let player of players">
+    <div class="flex-container player-info">
+      <div class="player-name">{{player.playerName}}</div>
+      <div class="player-scores">{{player.playerGame}}</div>
+    </div>
 
-</div>
-<div class="boards">
-  <app-board-component></app-board-component>
+    <div class="flex-container">
+      <ul class="flex-element flex-full scores-section">
+        <li>
+          <span class="number">
+            20
+            <div class="double-triple">
+              <div>D20</div>
+              <div>T20</div>
+            </div>
+          </span>
+        </li>
+        <li>
+          <span class="number">
+            19
+            <div class="double-triple">
+              <div>D19</div>
+              <div>T19</div>
+            </div>
+          </span>
+        </li>
+        <li>
+          <span class="number">
+            18
+            <div class="double-triple">
+              <div>D18</div>
+              <div>T18</div>
+            </div>
+          </span>
+        </li>
+        <li>
+          <span class="number">
+            17
+            <div class="double-triple">
+              <div>D17</div>
+              <div>T17</div>
+            </div>
+          </span>
+        </li>
+        <li>
+          <span class="number">
+            16
+            <div class="double-triple">
+              <div>D16</div>
+              <div>T16</div>
+            </div>
+          </span>
+        </li>
+        <li>
+          <span class="number">
+            15
+            <div class="double-triple">
+              <div>D15</div>
+              <div>T15</div>
+            </div>
+          </span>
+        </li>
+        <li>
+          <div class="bull-green">
+            <div class="bull-red"></div>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="flex-element flex-full scores-section pull-text-right">
+        <li>|</li>
+        <li>| |</li>
+        <li>| | |</li>
+        <li>| | |</li>
+        <li>|</li>
+        <li>| | |</li>
+        <li>| | | </li>
+      </ul>
+    </div>
+  </div>
 </div>

@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BoardComponentComponent } from './board-component/board-component.component';
 import { PlayerComponentComponent } from './player-component/player-component.component';
-
+import { FormsModule }   from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,8 @@ import { PlayerComponentComponent } from './player-component/player-component.co
     PlayerComponentComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
   ],
   providers: [BoardService],
   bootstrap: [AppComponent]

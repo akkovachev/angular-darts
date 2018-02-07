@@ -1,3 +1,5 @@
+import { Player } from './../player-component/player.model';
+import { BoardService } from './../services/board.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./board-component.component.css']
 })
 export class BoardComponentComponent implements OnInit {
+  public players: Player[];
 
-  constructor() { }
+  constructor(private boardService: BoardService) { }
 
   ngOnInit() {
+    this.players = this.boardService.getBoards();  
   }
 
 
