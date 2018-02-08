@@ -1,81 +1,117 @@
 <div class="flex-container">
-  <div class="flex-element player-container" *ngFor="let player of players">
-    <div class="flex-container player-info">
+  <div class="flex-element player-container" *ngFor="let player of players; let i = index">
+    <div class="flex-container player-info" style="justify-content: space-between;">
       <div class="player-name">{{player.playerName}}</div>
-      <div class="player-scores">{{player.playerGame}}</div>
+
+      <div class="player-scores">{{player.getTotalScore()}}</div>
     </div>
 
     <div class="flex-container">
       <ul class="flex-element flex-full scores-section">
         <li>
           <span class="number">
-            20
+            <span (click)="addScore(i, 20)">20</span>
             <div class="double-triple">
-              <div>D20</div>
-              <div>T20</div>
+              <div (click)="addScore(i, 20, 2)">D20</div>
+              <div (click)="addScore(i, 20, 3)">T20</div>
             </div>
           </span>
         </li>
         <li>
           <span class="number">
-            19
+            <span (click)="addScore(i, 19)">19</span>
             <div class="double-triple">
-              <div>D19</div>
-              <div>T19</div>
+              <div (click)="addScore(i, 19, 2)">D19</div>
+              <div (click)="addScore(i, 19, 3)">T19</div>
             </div>
           </span>
         </li>
         <li>
           <span class="number">
-            18
+            <span (click)="addScore(i, 18)">18</span>
             <div class="double-triple">
-              <div>D18</div>
-              <div>T18</div>
+              <div (click)="addScore(i, 18, 2)">D18</div>
+              <div (click)="addScore(i, 18, 3)">T18</div>
             </div>
           </span>
         </li>
         <li>
           <span class="number">
-            17
+            <span (click)="addScore(i, 17)">17</span>
             <div class="double-triple">
-              <div>D17</div>
-              <div>T17</div>
+              <div (click)="addScore(i, 17, 2)">D17</div>
+              <div (click)="addScore(i, 17, 3)">T17</div>
             </div>
           </span>
         </li>
         <li>
           <span class="number">
-            16
+            <span (click)="addScore(i, 16)">16</span>
             <div class="double-triple">
-              <div>D16</div>
-              <div>T16</div>
+              <div (click)="addScore(i, 16, 2)">D16</div>
+              <div (click)="addScore(i, 16, 3)">T16</div>
             </div>
           </span>
         </li>
         <li>
           <span class="number">
-            15
+            <span (click)="addScore(i, 15)">15</span>
             <div class="double-triple">
-              <div>D15</div>
-              <div>T15</div>
+              <div (click)="addScore(i, 15, 2)">D15</div>
+              <div (click)="addScore(i, 15, 3)">T15</div>
             </div>
           </span>
         </li>
         <li>
-          <div class="bull-green">
-            <div class="bull-red"></div>
+          <div class="bull-green" (click)="addScore(i, 25)">
+            <div class="bull-red" (click)="addScore(i, 25, 2); $event.stopPropagation()"></div>
           </div>
         </li>
       </ul>
 
       <ul class="flex-element flex-full scores-section pull-text-right">
-        <li>|</li>
-        <li>| |</li>
-        <li>| | |</li>
-        <li>| | |</li>
-        <li>|</li>
-        <li>| | |</li>
-        <li>| | | </li>
+        <li [ngSwitch]="player.gameSchema['20']">
+          <span *ngSwitchCase="20">|</span>
+          <span *ngSwitchCase="40">| |</span>
+          <span *ngSwitchCase="60">| | |</span>
+          <span *ngSwitchDefault>&nbsp;</span>
+        </li>
+        <li [ngSwitch]="player.gameSchema['19']">
+          <span *ngSwitchCase="19">|</span>
+          <span *ngSwitchCase="38">| |</span>
+          <span *ngSwitchCase="57">| | |</span>
+          <span *ngSwitchDefault>&nbsp;</span>
+        </li>
+        <li [ngSwitch]="player.gameSchema['18']">
+          <span *ngSwitchCase="18">|</span>
+          <span *ngSwitchCase="36">| |</span>
+          <span *ngSwitchCase="54">| | |</span>
+          <span *ngSwitchDefault>&nbsp;</span>
+        </li>
+        <li [ngSwitch]="player.gameSchema['17']">
+          <span *ngSwitchCase="17">|</span>
+          <span *ngSwitchCase="34">| |</span>
+          <span *ngSwitchCase="51">| | |</span>
+          <span *ngSwitchDefault>&nbsp;</span>
+        </li>
+        <li [ngSwitch]="player.gameSchema['16']">
+          <span *ngSwitchCase="16">|</span>
+          <span *ngSwitchCase="32">| |</span>
+          <span *ngSwitchCase="48">| | |</span>
+          <span *ngSwitchDefault>&nbsp;</span>
+        </li>
+        <li [ngSwitch]="player.gameSchema['15']">
+          <span *ngSwitchCase="15">|</span>
+          <span *ngSwitchCase="30">| |</span>
+          <span *ngSwitchCase="45">| | |</span>
+          <span *ngSwitchDefault>&nbsp;</span>
+        </li>
+        <li [ngSwitch]="player.gameSchema['25']">
+          <span *ngSwitchCase="25">|</span>
+          <span *ngSwitchCase="50">| |</span>
+          <span *ngSwitchCase="75">| | |</span>
+          <span *ngSwitchDefault>&nbsp;</span>
+        </li>
       </ul>
     </div>
   </div>

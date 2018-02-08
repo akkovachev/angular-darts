@@ -1,12 +1,17 @@
+import { Cricket } from './../games/cricket.model';
+
 export class Player {
     public playerName: String;
     public playerGame: String;
-    public playerScores: Number[];
+    public gameSchema: Cricket;
+    public playerTotalScore: number = 0;
 
-    constructor(name: string, game: string, scores: Number[]){
+    constructor(name: string, game: Cricket){
         this.playerName = name;
-        this.playerGame = game;
-        this.playerScores = scores;
+        this.gameSchema = game;
     }
 
+    getTotalScore() {
+        return this.playerTotalScore;
+    }
 }

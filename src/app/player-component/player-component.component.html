@@ -6,8 +6,8 @@
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword4">Game</label>
-      <select class="form-control " name="game" ngModel>
-        <option>Criect</option>
+      <select class="form-control " name="game" [ngModel]="selectedGame">
+        <option *ngFor="let value of values" [value]="value">{{value}}</option>
       </select>
     </div>
   </div>
