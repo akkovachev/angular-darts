@@ -5,6 +5,7 @@ export class Player {
     public playerGame: String;
     public gameSchema: Cricket;
     public playerTotalScore: number = 0;
+    public isPlayerActive : boolean = false;
 
     constructor(name: string, game: Cricket){
         this.playerName = name;
@@ -13,5 +14,9 @@ export class Player {
 
     getTotalScore() {
         return this.playerTotalScore;
+    }
+
+    isActive() {
+        return this.isPlayerActive;
     }
 }

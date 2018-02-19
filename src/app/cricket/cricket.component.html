@@ -1,0 +1,54 @@
+<div class="flex-container">
+  <ul class="scores-section">
+    <li>
+      <div class="flex-container numbers">
+        <div (click)="addScore(20)">20</div>
+        <div (click)="addScore(20, 2)">D20</div>
+        <div (click)="addScore(20, 3)">T20</div>
+      </div>
+    </li>
+    <li>
+      <div class="flex-container numbers">
+        <div (click)="addScore(19)">19</div>
+        <div (click)="addScore(19, 2)">D19</div>
+        <div (click)="addScore(19, 3)">T19</div>
+      </div>
+    </li>
+    <li>
+      <div class="flex-container numbers">
+        <div (click)="addScore(18)">18</div>
+        <div (click)="addScore(18, 2)">D18</div>
+        <div (click)="addScore(18, 3)">T18</div>
+      </div>
+    </li>
+    <li>
+      <div class="flex-container numbers">
+        <div (click)="addScore(17)">17</div>
+        <div (click)="addScore(17, 2)">D17</div>
+        <div (click)="addScore(17, 3)">T17</div>
+      </div>
+    </li>
+    <li>
+      <div class="flex-container numbers">
+        <div (click)="addScore(16)">16</div>
+        <div (click)="addScore(16, 2)">D16</div>
+        <div (click)="addScore(16, 3)">T16</div>
+      </div>
+    </li>
+    <li>
+      <div class="flex-container numbers">
+        <div (click)="addScore(15)">15</div>
+        <div (click)="addScore(15, 2)">D15</div>
+        <div (click)="addScore(15, 3)">T15</div>
+      </div>
+    </li>
+    <li>
+      <div class="bull-green" (click)="addScore(25)">
+        <div class="bull-red" (click)="addScore(25, 2); $event.stopPropagation()"></div>
+      </div>
+    </li>
+  </ul>
+  
+  <app-player *ngFor="let player of players;" [player]= player></app-player>
+   
+</div>
