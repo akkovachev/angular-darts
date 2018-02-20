@@ -8,6 +8,7 @@ import { FormsModule }   from '@angular/forms';
 import { CricketComponent } from './cricket/cricket.component';
 import { PlayerComponent } from './cricket/player/player.component';
 import { CricketService } from './services/cricket.service';
+import { PlayersService } from './services/players.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import { CricketService } from './services/cricket.service';
     BrowserModule,
     FormsModule,
   ],
-  providers: [BoardService, CricketService],
+  providers: [BoardService, PlayersService, CricketService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

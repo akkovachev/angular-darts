@@ -1,6 +1,7 @@
 import { CricketService } from './../services/cricket.service';
 import { Player } from './../player-component/player.model';
 import { Component, OnInit, Input } from '@angular/core';
+import { PlayersService } from '../services/players.service';
 
 @Component({
   selector: 'app-cricket',
@@ -10,10 +11,10 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CricketComponent implements OnInit {
   players: Player[];
 
-  constructor(private cricketService: CricketService) { }
+  constructor(private cricketService: CricketService, private playersService: PlayersService) { }
 
   ngOnInit() {
-    this.players = this.cricketService.getPlayers();
+    this.players = this.playersService.getPlayers();
   }
 
   addScore(score: number, multiplier: number) {

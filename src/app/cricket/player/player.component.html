@@ -6,32 +6,62 @@
 
   <div class="flex-container player-info">
     <div class="player-sector flex-item">20</div>
-    <div class="player-score-lines flex-item align-right">| | |</div>
+    <div class="player-score-lines flex-item align-right" [ngSwitch]="player.gameSchema['20']">
+      <span *ngSwitchCase="20">|</span>
+      <span *ngSwitchCase="40">| |</span>
+      <span *ngSwitchCase="60">| | |</span>
+      <span *ngSwitchDefault>&nbsp;</span>
+    </div>
   </div>
 
   <div class="flex-container player-info">
     <div class="player-sector flex-item">19</div>
-    <div class="player-score-lines flex-item align-right">| | |</div>
+    <div class="player-score-lines flex-item align-right" [ngSwitch]="player.gameSchema['19']">
+        <span *ngSwitchCase="19">|</span>
+        <span *ngSwitchCase="38">| |</span>
+        <span *ngSwitchCase="57">| | |</span>
+        <span *ngSwitchDefault>&nbsp;</span>
+      </div>
   </div>
 
   <div class="flex-container player-info">
     <div class="player-sector flex-item">18</div>
-    <div class="player-score-lines flex-item align-right">| | |</div>
+    <div class="player-score-lines flex-item align-right" [ngSwitch]="player.gameSchema['18']">
+        <span *ngSwitchCase="18">|</span>
+        <span *ngSwitchCase="36">| |</span>
+        <span *ngSwitchCase="54">| | |</span>
+        <span *ngSwitchDefault>&nbsp;</span>
+      </div>
   </div>
 
   <div class="flex-container player-info">
     <div class="player-sector flex-item">17</div>
-    <div class="player-score-lines flex-item align-right">| | |</div>
+    <div class="player-score-lines flex-item align-right" [ngSwitch]="player.gameSchema['17']">
+        <span *ngSwitchCase="17">|</span>
+        <span *ngSwitchCase="34">| |</span>
+        <span *ngSwitchCase="51">| | |</span>
+        <span *ngSwitchDefault>&nbsp;</span>
+      </div>
   </div>
 
   <div class="flex-container player-info">
     <div class="player-sector flex-item">16</div>
-    <div class="player-score-lines flex-item align-right">| | |</div>
+    <div class="player-score-lines flex-item align-right" [ngSwitch]="player.gameSchema['16']">
+        <span *ngSwitchCase="16">|</span>
+        <span *ngSwitchCase="32">| |</span>
+        <span *ngSwitchCase="48">| | |</span>
+        <span *ngSwitchDefault>&nbsp;</span>
+      </div>
   </div>
 
   <div class="flex-container player-info">
     <div class="player-sector flex-item">15</div>
-    <div class="player-score-lines flex-item align-right">| | |</div>
+    <div class="player-score-lines flex-item align-right" [ngSwitch]="player.gameSchema['15']">
+        <span *ngSwitchCase="15">|</span>
+        <span *ngSwitchCase="30">| |</span>
+        <span *ngSwitchCase="45">| | |</span>
+        <span *ngSwitchDefault>&nbsp;</span>
+      </div>
   </div>
 
   <div class="flex-container player-info">
@@ -40,6 +70,11 @@
         <div class="bull-red"></div>
       </div>
     </div>
-    <div class="player-score-lines flex-item align-right">| | |</div>
+    <div class="player-score-lines flex-item align-right" [ngSwitch]="player.gameSchema['25']">
+        <span *ngSwitchCase="25">|</span>
+        <span *ngSwitchCase="50">| |</span>
+        <span *ngSwitchCase="75">| | |</span>
+        <span *ngSwitchDefault>&nbsp;</span>
+      </div>
   </div>
 </div>

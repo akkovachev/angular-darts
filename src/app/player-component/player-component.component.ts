@@ -1,9 +1,9 @@
 import { CricketService } from './../services/cricket.service';
-import { BoardService } from './../services/board.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms/src/directives/ng_form';
 import { Player } from './player.model';
 import { Cricket } from '../games/cricket.model';
+import { PlayersService } from '../services/players.service';
 
 @Component({
   selector: 'app-player-component',
@@ -14,13 +14,13 @@ export class PlayerComponentComponent implements OnInit {
   public values: String[] = ['Cricket', '301'];
   selectedGame = 'Cricket';
 
-  constructor(private boardService: BoardService, private cricketService: CricketService) { }
+  constructor(private playersService: PlayersService) { }
 
   ngOnInit() {
     
   }
 
   submitForm(form: NgForm) {
-    this.cricketService.addPlayer(new Player(form.value.playerName, new Cricket()));
+    this.playersService.addPlayer(new Player(form.value.playerName, new Cricket()));
   }
 }
